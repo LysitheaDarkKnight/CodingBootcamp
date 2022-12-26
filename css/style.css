@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+:root {
+  --dark-blue-color: hsl(240, 38%, 20%);
+  --grayish-blue-color: hsl(240, 18%, 77%);
+}
+
+body {
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background: url(../images/pattern-curve.svg) left bottom, url(../images/pattern-quotes.svg) top 27% left 20%, url(../images/pattern-bg.svg) bottom 50% right 10%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.background .container {
+  display: grid;
+  align-items: stretch;
+  justify-content: stretch;
+  grid-template-columns: repeat(4, 1fr);
+  width: min(1100px, 85%);
+}
+.background .container .john, .background .container .tanya, .background .container picture {
+  grid-row: 1/2;
+}
+.background .container .john, .background .container .tanya {
+  grid-column: 1/4;
+  z-index: 1;
+  width: min(630px, 70%);
+  align-self: center;
+}
+.background .container .john .quote, .background .container .tanya .quote {
+  color: var(--dark-blue-color);
+  font-weight: 300;
+}
+.background .container .john .desc, .background .container .tanya .desc {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.background .container .john .desc__name, .background .container .tanya .desc__name {
+  color: var(--dark-blue-color);
+}
+.background .container .john .desc__title, .background .container .tanya .desc__title {
+  color: var(--grayish-blue-color);
+}
+.background .container picture {
+  position: relative;
+  grid-column: 1/5;
+  display: flex;
+}
+.background .container picture > img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1rem 2rem rgba(160, 143, 182, 0.15), 0 0.66rem 0.66rem rgba(160, 143, 182, 0.12);
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.background .container picture .john-image {
+  display: block;
+  opacity: 0;
+}
+.background .container picture .slider {
+  position: absolute;
+  bottom: -4%;
+  left: 62%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  gap: 2.5rem;
+  background-color: white;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem rgba(160, 143, 182, 0.15), 0 0.66rem 0.66rem rgba(160, 143, 182, 0.12);
+}
+.background .container picture .slider .next {
+  cursor: pointer;
+}
+.background .container picture .slider .prev {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(46%) saturate(5426%) hue-rotate(180deg) brightness(107%) contrast(104%);
+}
+.background .john {
+  display: none;
+}
+
+@media (max-width: 875px) {
+  .background {
+    background: url(../images/pattern-curve.svg) left bottom/100% auto, url(../images/pattern-quotes.svg) top 59% left 50%/5rem, url(../images/pattern-bg.svg) bottom 90% right 37%/25rem auto;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  .background .container {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    width: min(900px, 90%);
+    margin: auto;
+    gap: 2rem;
+    padding: 5rem 0;
+  }
+  .background .container__:nth-child(even), .background .container picture {
+    order: -1;
+  }
+  .background .container .john, .background .container .tanya, .background .container picture {
+    grid-row: auto;
+  }
+  .background .container .john, .background .container .tanya {
+    grid-column: auto;
+    width: auto;
+    align-self: center;
+  }
+  .background .container .john .quote, .background .container .tanya .quote {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .background .container .john .desc, .background .container .tanya .desc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: column;
+  }
+  .background .container picture {
+    grid-column: auto;
+    justify-self: center;
+  }
+  .background .container picture > img {
+    width: 20rem;
+    margin: auto;
+    opacity: 1;
+  }
+  .background .container picture .john-image {
+    position: absolute;
+    right: 20rem;
+  }
+  .background .container picture .slider {
+    bottom: -7%;
+    left: 34%;
+  }
+}/*# sourceMappingURL=style.css.map */
