@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
-- Live Site URL: (https://lysitheadarkknight.github.io/FourCardFeatureSectionMaster/)
+- Solution URL: (https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL/hub)
+- Live Site URL: (https://lysitheadarkknight.github.io/CodingBootcamp/)
 
 ## My process
 
